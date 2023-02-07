@@ -2,6 +2,12 @@ from pwn import *
 import paramiko
 import sys
 
+if len(sys.argv) !=4:
+    print("Invalid Argument!")
+    print(">> {} <host> <user> <passwordfile>".format(sys.argv[0]))
+    exit(0)
+
+    
 host = sys.argv[1]
 username = sys.argv[2]
 attempts = 0
